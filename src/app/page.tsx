@@ -1,102 +1,401 @@
-import Image from "next/image";
+import ModernGallery from '../components/ModernGallery';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="bg-white/90 backdrop-blur-sm fixed w-full z-50 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+          <img 
+            src="/logo.png" 
+            alt="David Vincent" 
+            className="h-12 w-12 object-contain"
+          />
+          <div className="flex space-x-8">
+            <a href="#musique" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Musique</a>
+            <a href="/bio" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Bio</a>
+            <a href="#concerts" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Concerts</a>
+            <a href="#contact" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Contact</a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+      {/* Hero Section with Video Background */}
+      <section className="relative pt-24 pb-20 min-h-screen flex items-center overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            autoPlay 
+            muted 
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+          {/* Logo */}
+          <div className="mb-12 flex justify-center">
+            <img 
+              src="/logo.png" 
+              alt="David Vincent Logo" 
+              className="w-32 h-32 md:w-40 md:h-40 object-contain hover:scale-105 transition-transform duration-300 drop-shadow-2xl"
+            />
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-black mb-6 text-white drop-shadow-2xl tracking-wider" style={{fontFamily: 'var(--font-bebas)'}}>
+            DAVID
+            <span className="block text-[#da3b28]">VINCENT</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-100 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+            Arles - Rock, noise, cold wave
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a 
+              href="https://www.youtube.com/@DavidVincent-ts5ex" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-red-600 text-white font-black rounded-lg hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm tracking-wide"
+              style={{fontFamily: 'var(--font-oswald)'}}
+            >
+ÉCOUTER SUR YOUTUBE
+            </a>
+            <button className="px-8 py-4 border-2 border-gray-200 text-gray-100 font-black rounded-lg hover:border-red-400 hover:text-[#da3b28] hover:bg-white/10 transition-all duration-300 backdrop-blur-sm tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>
+PROCHAINS CONCERTS
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Musique Section */}
+      <section id="musique" className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        
+        {/* Halo d'atterrissage ovni en bas */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-[1400px] h-[600px] bg-[#da3b28]/50 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-0 -left-40 translate-y-1/3 w-[800px] h-[400px] bg-[#da3b28]/40 rounded-full blur-[100px] animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-0 -right-40 translate-y-1/3 w-[900px] h-[450px] bg-[#da3b28]/35 rounded-full blur-[110px] animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-0 left-1/4 translate-y-2/3 w-[600px] h-[300px] bg-[#da3b28]/30 rounded-full blur-[80px] animate-pulse" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute bottom-0 right-1/4 translate-y-2/3 w-[700px] h-[350px] bg-[#da3b28]/45 rounded-full blur-[90px] animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <h2 className="text-5xl md:text-6xl font-black mb-16 text-center text-[#da3b28] tracking-widest" style={{fontFamily: 'var(--font-bebas)'}}>
+LES COMPOSITIONS
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* THE SWEET CHILD */}
+            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-[#da3b28]/50 rounded-xl p-8 hover:border-[#da3b28] hover:shadow-2xl hover:shadow-[#da3b28]/20 transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#da3b28]/20 via-transparent to-orange-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-4 h-4 bg-[#da3b28] rounded-full animate-pulse shadow-lg shadow-[#da3b28]/50"></div>
+                  <span className="text-lg text-orange-400 font-black tracking-wider">7:34</span>
+                </div>
+                <h3 className="text-white font-black text-2xl mb-3 group-hover:text-[#da3b28] transition-colors transform group-hover:scale-105 duration-300 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>
+                  THE SWEET CHILD
+                </h3>
+                <p className="text-gray-400 text-sm mb-6 font-semibold">🎵 Single</p>
+                <div className="text-xs text-gray-500 mb-4">Il y a 3 semaines</div>
+                
+                <div className="mb-6 rounded-lg overflow-hidden">
+                  <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/Mxo9vkeAzjQ" 
+                    title="THE SWEET CHILD - David Vincent"
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+                
+              </div>
+              
+              <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-[#da3b28] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+
+            {/* LA VILLE */}
+            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-[#da3b28]/50 rounded-xl p-8 hover:border-[#da3b28] hover:shadow-2xl hover:shadow-[#da3b28]/20 transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#da3b28]/20 via-transparent to-orange-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-4 h-4 bg-[#da3b28] rounded-full animate-pulse shadow-lg shadow-[#da3b28]/50"></div>
+                  <span className="text-lg text-orange-400 font-black tracking-wider">4:10</span>
+                </div>
+                <h3 className="text-white font-black text-2xl mb-3 group-hover:text-[#da3b28] transition-colors transform group-hover:scale-105 duration-300 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>
+                  LA VILLE
+                </h3>
+                <p className="text-gray-400 text-sm mb-6 font-semibold">🎵 Single</p>
+                <div className="text-xs text-gray-500 mb-4">Il y a 3 mois</div>
+                
+                <div className="mb-6 rounded-lg overflow-hidden">
+                  <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/6b7mGeh1xpU" 
+                    title="LA VILLE - David Vincent"
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+                
+              </div>
+              
+              <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-[#da3b28] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+
+            {/* LA VIE ME VA */}
+            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-[#da3b28]/50 rounded-xl p-8 hover:border-[#da3b28] hover:shadow-2xl hover:shadow-[#da3b28]/20 transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#da3b28]/20 via-transparent to-orange-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-4 h-4 bg-[#da3b28] rounded-full animate-pulse shadow-lg shadow-[#da3b28]/50"></div>
+                  <span className="text-lg text-orange-400 font-black tracking-wider">3:55</span>
+                </div>
+                <h3 className="text-white font-black text-2xl mb-3 group-hover:text-[#da3b28] transition-colors transform group-hover:scale-105 duration-300 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>
+                  LA VIE ME VA
+                </h3>
+                <p className="text-gray-400 text-sm mb-6 font-semibold">🎵 Single</p>
+                <div className="text-xs text-gray-500 mb-4">Il y a 3 mois</div>
+                
+                <div className="mb-6 rounded-lg overflow-hidden">
+                  <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/2BJYUqgNeyw" 
+                    title="LA VIE ME VA - David Vincent"
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+                
+              </div>
+              
+              <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-[#da3b28] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* Concerts Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-black text-center mb-16 text-[#da3b28] tracking-wide" style={{fontFamily: 'var(--font-bebas)'}}>
+            PROCHAINS CONCERTS
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-[#da3b28]/20 transition-all duration-300">
+              <div className="flex flex-col md:flex-row md:items-center justify-between">
+                <div className="mb-4 md:mb-0">
+                  <h3 className="text-2xl font-black text-gray-900 mb-2 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>PADDY MULLIN'S</h3>
+                  <p className="text-gray-600 mb-2">Arles</p>
+                  <p className="text-sm text-gray-500">Concert</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-3xl font-black text-[#da3b28] mb-1" style={{fontFamily: 'var(--font-bebas)'}}>NOV 2025</p>
+                  <p className="text-gray-600">Dates à venir</p>
+                  <button className="mt-2 px-4 py-2 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed font-medium">
+                    BIENTÔT
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
+              <div className="flex flex-col md:flex-row md:items-center justify-between">
+                <div className="mb-4 md:mb-0">
+                  <h3 className="text-2xl font-black text-gray-900 mb-2 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>TOURNÉE PROVENCE</h3>
+                  <p className="text-gray-600 mb-2">Diverses villes PACA</p>
+                  <p className="text-sm text-gray-500">Concerts intimistes</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-3xl font-black text-[#da3b28] mb-1" style={{fontFamily: 'var(--font-bebas)'}}>2026</p>
+                  <p className="text-gray-600">Dates à venir</p>
+                  <button className="mt-2 px-4 py-2 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed font-medium">
+                    BIENTÔT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Presse Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-black text-center mb-16 text-[#da3b28] tracking-wide" style={{fontFamily: 'var(--font-bebas)'}}>
+            PRESSE & MÉDIAS
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
+              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>INTERVIEW FRANCE BLEU PROVENCE</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                "David Vincent, duo rock d'Arles aux sonorités hybrides, nous parle de son premier EP et de ses influences musicales..."
+              </p>
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-500">Décembre 2024</span>
+                <a href="#" className="text-[#da3b28] hover:text-[#b8321f] font-medium">Écouter →</a>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
+              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>ARTICLE LA PROVENCE</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                "Le rock arlésien a trouvé ses nouveaux ambassadeurs. David Vincent mélange tradition et modernité avec une maîtrise impressionnante..."
+              </p>
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-500">Novembre 2024</span>
+                <a href="#" className="text-[#da3b28] hover:text-[#b8321f] font-medium">Lire →</a>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
+              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>SESSION LIVE YOUTUBE</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                "Performance acoustique exclusive de 'La Ville' et 'La Vie Me Va' dans les studios de Radio Pays d'Arles..."
+              </p>
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-500">Octobre 2024</span>
+                <a href="#" className="text-[#da3b28] hover:text-[#b8321f] font-medium">Voir →</a>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
+              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>CHRONIQUE ROCK MADE IN FRANCE</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                "Un premier EP qui marque les esprits. David Vincent s'impose déjà comme une référence du rock français contemporain..."
+              </p>
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-500">Septembre 2024</span>
+                <a href="#" className="text-[#da3b28] hover:text-[#b8321f] font-medium">Lire →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Modern Gallery */}
+      <section className="py-20 bg-black relative overflow-hidden">
+        
+        {/* Halo d'atterrissage ovni en bas pour la galerie */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-[1400px] h-[600px] bg-[#da3b28]/50 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-0 -left-40 translate-y-1/3 w-[800px] h-[400px] bg-[#da3b28]/40 rounded-full blur-[100px] animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-0 -right-40 translate-y-1/3 w-[900px] h-[450px] bg-[#da3b28]/35 rounded-full blur-[110px] animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-0 left-1/4 translate-y-2/3 w-[600px] h-[300px] bg-[#da3b28]/30 rounded-full blur-[80px] animate-pulse" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute bottom-0 right-1/4 translate-y-2/3 w-[700px] h-[350px] bg-[#da3b28]/45 rounded-full blur-[90px] animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <h2 className="text-5xl md:text-6xl font-black text-center mb-16 text-[#da3b28] tracking-widest" style={{fontFamily: 'var(--font-bebas)'}}>
+GALERIE
+          </h2>
+          
+          <ModernGallery />
+        </div>
+      </section>
+
+      {/* Actualités Section */}
+      <section id="concerts" className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-black text-center mb-16 text-[#da3b28] tracking-wide" style={{fontFamily: 'var(--font-bebas)'}}>
+            ACTUALITÉS
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <article className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+              </div>
+              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>NOUVEL ALBUM EN PRÉPARATION</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">Le groupe travaille actuellement sur son prochain opus, prévu pour 2024.</p>
+              <span className="text-sm text-gray-500 font-medium">15 Décembre 2023</span>
+            </article>
+            
+            <article className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+              </div>
+              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>FESTIVAL DES SUDS</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">Retrouvez David Vincent au Festival des Suds d'Arles cet été.</p>
+              <span className="text-sm text-gray-500 font-medium">08 Décembre 2023</span>
+            </article>
+            
+            <article className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+              </div>
+              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>TOURNÉE PROVENCE</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">Une série de concerts intimistes dans toute la région PACA.</p>
+              <span className="text-sm text-gray-500 font-medium">02 Décembre 2023</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer id="contact" className="py-16 px-6 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Logo in footer */}
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="/logo.png" 
+              alt="David Vincent Logo" 
+              className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          
+          <h3 className="text-2xl font-black text-[#da3b28] mb-8 tracking-wide" style={{fontFamily: 'var(--font-bebas)'}}>RESTEZ CONNECTÉS</h3>
+          
+          <div className="flex justify-center space-x-8 mb-8">
+            <a href="#" className="flex items-center space-x-2 text-gray-600 hover:text-[#da3b28] transition-colors duration-300 font-medium">
+              <span>Email</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/thedavidvincentgroup?utm_source=qr&igsh=YzM3a2NteDgxOWly" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center space-x-2 text-gray-600 hover:text-[#da3b28] transition-colors duration-300 font-medium"
+            >
+              <span>Instagram</span>
+            </a>
+            <a 
+              href="https://www.youtube.com/@DavidVincent-ts5ex" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center space-x-2 text-gray-600 hover:text-[#da3b28] transition-colors duration-300 font-medium"
+            >
+              <span>YouTube</span>
+            </a>
+          </div>
+          
+          <div className="border-t border-gray-200 pt-8">
+            <p className="text-gray-500 text-sm">© 2024 David Vincent - Tous droits réservés</p>
+            <p className="text-gray-400 text-xs mt-2">Rock français • Arles • Provence</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
