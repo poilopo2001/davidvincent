@@ -313,60 +313,6 @@ LES COMPOSITIONS
         </div>
       </section>
 
-      {/* Presse Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-black text-center mb-16 text-[#da3b28] tracking-wide" style={{fontFamily: 'var(--font-bebas)'}}>
-            PRESSE & MÉDIAS
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>INTERVIEW FRANCE BLEU PROVENCE</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                &quot;David Vincent, duo rock d&apos;Arles aux sonorités hybrides, nous parle de son premier EP et de ses influences musicales...&quot;
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">Décembre 2024</span>
-                <a href="#" className="text-[#da3b28] hover:text-[#b8321f] font-medium">Écouter →</a>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>ARTICLE LA PROVENCE</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                &quot;Le rock arlésien a trouvé ses nouveaux ambassadeurs. David Vincent mélange tradition et modernité avec une maîtrise impressionnante...&quot;
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">Novembre 2024</span>
-                <a href="#" className="text-[#da3b28] hover:text-[#b8321f] font-medium">Lire →</a>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>SESSION LIVE YOUTUBE</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                &quot;Performance acoustique exclusive de &apos;La Ville&apos; et &apos;La Vie Me Va&apos; dans les studios de Radio Pays d&apos;Arles...&quot;
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">Octobre 2024</span>
-                <a href="#" className="text-[#da3b28] hover:text-[#b8321f] font-medium">Voir →</a>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>CHRONIQUE ROCK MADE IN FRANCE</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                &quot;Un premier EP qui marque les esprits. David Vincent s&apos;impose déjà comme une référence du rock français contemporain...&quot;
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">Septembre 2024</span>
-                <a href="#" className="text-[#da3b28] hover:text-[#b8321f] font-medium">Lire →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Modern Gallery */}
       <section className="py-20 bg-black relative overflow-hidden">
