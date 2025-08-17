@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const images = [
   {
@@ -89,7 +90,13 @@ export default function ModernGallery() {
             className="gallery-item"
             onClick={() => openLightbox(index)}
           >
-            <img src={image.src} alt={image.alt} />
+            <Image 
+              src={image.src} 
+              alt={image.alt}
+              width={400}
+              height={300}
+              className="object-cover w-full h-full"
+            />
             <div className="gallery-overlay">
               <div className="gallery-title">{image.title}</div>
               <div className="gallery-subtitle">{image.subtitle}</div>
@@ -108,9 +115,12 @@ export default function ModernGallery() {
             >
               &times;
             </button>
-            <img
+            <Image
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
+              width={800}
+              height={600}
+              className="object-contain w-full h-full"
             />
             <button
               className="lightbox-nav lightbox-prev"

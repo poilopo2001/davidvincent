@@ -1,4 +1,5 @@
 import ModernGallery from '../components/ModernGallery';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -6,9 +7,11 @@ export default function Home() {
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-sm fixed w-full z-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <img 
+          <Image 
             src="/logo.png" 
             alt="David Vincent" 
+            width={48}
+            height={48}
             className="h-12 w-12 object-contain"
           />
           <div className="flex space-x-8">
@@ -41,9 +44,11 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
           {/* Logo */}
           <div className="mb-12 flex justify-center">
-            <img 
+            <Image 
               src="/logo.png" 
               alt="David Vincent Logo" 
+              width={160}
+              height={160}
               className="w-32 h-32 md:w-40 md:h-40 object-contain hover:scale-105 transition-transform duration-300 drop-shadow-2xl"
             />
           </div>
@@ -210,7 +215,7 @@ LES COMPOSITIONS
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-[#da3b28]/20 transition-all duration-300">
               <div className="flex flex-col md:flex-row md:items-center justify-between">
                 <div className="mb-4 md:mb-0">
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>PADDY MULLIN'S</h3>
+                  <h3 className="text-2xl font-black text-gray-900 mb-2 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>PADDY MULLIN&apos;S</h3>
                   <p className="text-gray-600 mb-2">Arles</p>
                   <p className="text-sm text-gray-500">Concert</p>
                 </div>
@@ -256,7 +261,7 @@ LES COMPOSITIONS
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
               <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>INTERVIEW FRANCE BLEU PROVENCE</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                "David Vincent, duo rock d'Arles aux sonorités hybrides, nous parle de son premier EP et de ses influences musicales..."
+                &quot;David Vincent, duo rock d&apos;Arles aux sonorités hybrides, nous parle de son premier EP et de ses influences musicales...&quot;
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-500">Décembre 2024</span>
@@ -267,7 +272,7 @@ LES COMPOSITIONS
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
               <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>ARTICLE LA PROVENCE</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                "Le rock arlésien a trouvé ses nouveaux ambassadeurs. David Vincent mélange tradition et modernité avec une maîtrise impressionnante..."
+                &quot;Le rock arlésien a trouvé ses nouveaux ambassadeurs. David Vincent mélange tradition et modernité avec une maîtrise impressionnante...&quot;
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-500">Novembre 2024</span>
@@ -278,7 +283,7 @@ LES COMPOSITIONS
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
               <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>SESSION LIVE YOUTUBE</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                "Performance acoustique exclusive de 'La Ville' et 'La Vie Me Va' dans les studios de Radio Pays d'Arles..."
+                &quot;Performance acoustique exclusive de &apos;La Ville&apos; et &apos;La Vie Me Va&apos; dans les studios de Radio Pays d&apos;Arles...&quot;
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-500">Octobre 2024</span>
@@ -289,7 +294,7 @@ LES COMPOSITIONS
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
               <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>CHRONIQUE ROCK MADE IN FRANCE</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                "Un premier EP qui marque les esprits. David Vincent s'impose déjà comme une référence du rock français contemporain..."
+                &quot;Un premier EP qui marque les esprits. David Vincent s&apos;impose déjà comme une référence du rock français contemporain...&quot;
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-500">Septembre 2024</span>
@@ -340,7 +345,7 @@ GALERIE
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
               </div>
               <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>FESTIVAL DES SUDS</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">Retrouvez David Vincent au Festival des Suds d'Arles cet été.</p>
+              <p className="text-gray-600 mb-6 leading-relaxed">Retrouvez David Vincent au Festival des Suds d&apos;Arles cet été.</p>
               <span className="text-sm text-gray-500 font-medium">08 Décembre 2023</span>
             </article>
             
@@ -360,9 +365,11 @@ GALERIE
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo in footer */}
           <div className="mb-8 flex justify-center">
-            <img 
+            <Image 
               src="/logo.png" 
               alt="David Vincent Logo" 
+              width={80}
+              height={80}
               className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
             />
           </div>

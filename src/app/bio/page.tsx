@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Bio() {
   const [visibleElements, setVisibleElements] = useState<Set<number>>(new Set())
@@ -29,16 +31,21 @@ export default function Bio() {
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-sm fixed w-full z-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <img 
+          <Image 
             src="/logo.png" 
             alt="David Vincent" 
+            width={48}
+            height={48}
             className="h-12 w-12 object-contain"
           />
           <div className="flex space-x-8">
-            <a href="/" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Accueil</a>
+            <Link href="/" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Accueil</Link>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/#musique" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Musique</a>
-            <a href="/bio" className="text-[#da3b28] font-medium">Bio</a>
+            <span className="text-[#da3b28] font-medium">Bio</span>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/#concerts" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Concerts</a>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/#contact" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Contact</a>
           </div>
         </div>
@@ -327,13 +334,13 @@ export default function Bio() {
 
           {/* Back Button */}
           <div className="text-center">
-            <a 
+            <Link 
               href="/"
               className="inline-block px-8 py-4 bg-[#da3b28] text-white font-black rounded-lg hover:bg-[#b8321f] transition-all duration-300 shadow-lg hover:shadow-xl tracking-wide"
               style={{fontFamily: 'var(--font-oswald)'}}
             >
               ← RETOUR À L&apos;ACCUEIL
-            </a>
+            </Link>
           </div>
 
         </div>
@@ -343,9 +350,11 @@ export default function Bio() {
       <footer className="py-16 px-6 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 flex justify-center">
-            <img 
+            <Image 
               src="/logo.png" 
               alt="David Vincent Logo" 
+              width={80}
+              height={80}
               className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
             />
           </div>
