@@ -293,22 +293,6 @@ LES COMPOSITIONS
             </div>
 
 
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-red-200 transition-all duration-300">
-              <div className="flex flex-col md:flex-row md:items-center justify-between">
-                <div className="mb-4 md:mb-0">
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>TOURNÉE PROVENCE</h3>
-                  <p className="text-gray-600 mb-2">Diverses villes PACA</p>
-                  <p className="text-sm text-gray-500">Concerts intimistes</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-3xl font-black text-[#da3b28] mb-1" style={{fontFamily: 'var(--font-bebas)'}}>2026</p>
-                  <p className="text-gray-600">Dates à venir</p>
-                  <button className="mt-2 px-4 py-2 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed font-medium">
-                    BIENTÔT
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
