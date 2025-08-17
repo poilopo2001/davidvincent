@@ -326,39 +326,6 @@ GALERIE
         </div>
       </section>
 
-      {/* Actualités Section */}
-      <section id="concerts" className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-black text-center mb-16 text-[#da3b28] tracking-wide" style={{fontFamily: 'var(--font-bebas)'}}>
-            ACTUALITÉS
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <article className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-              </div>
-              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>NOUVEL ALBUM EN PRÉPARATION</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">Le groupe travaille actuellement sur son prochain opus, prévu pour 2024.</p>
-              <span className="text-sm text-gray-500 font-medium">15 Décembre 2023</span>
-            </article>
-            
-            <article className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-              </div>
-              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>FESTIVAL DES SUDS</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">Retrouvez David Vincent au Festival des Suds d&apos;Arles cet été.</p>
-              <span className="text-sm text-gray-500 font-medium">08 Décembre 2023</span>
-            </article>
-            
-            <article className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-              </div>
-              <h3 className="text-xl font-black text-gray-900 mb-4 tracking-wide" style={{fontFamily: 'var(--font-oswald)'}}>TOURNÉE PROVENCE</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">Une série de concerts intimistes dans toute la région PACA.</p>
-              <span className="text-sm text-gray-500 font-medium">02 Décembre 2023</span>
-            </article>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer id="contact" className="py-16 px-6 bg-gray-50 border-t border-gray-200">
