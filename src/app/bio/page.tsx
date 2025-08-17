@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 export default function Bio() {
   const [visibleElements, setVisibleElements] = useState<Set<number>>(new Set())
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,14 +32,18 @@ export default function Bio() {
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-sm fixed w-full z-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Image 
-            src="/logo.png" 
-            alt="David Vincent" 
-            width={48}
-            height={48}
-            className="h-12 w-12 object-contain"
-          />
-          <div className="flex space-x-8">
+          <Link href="/">
+            <Image 
+              src="/logo.png" 
+              alt="David Vincent" 
+              width={48}
+              height={48}
+              className="h-12 w-12 object-contain"
+            />
+          </Link>
+          
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Accueil</Link>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/#musique" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Musique</a>
@@ -47,6 +52,65 @@ export default function Bio() {
             <a href="/#concerts" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Concerts</a>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/#contact" className="text-gray-700 hover:text-[#da3b28] transition-colors font-medium">Contact</a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Menu"
+          >
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-300 ${
+              mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+            }`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-opacity duration-300 ${
+              mobileMenuOpen ? 'opacity-0' : ''
+            }`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-300 ${
+              mobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+            }`}></span>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200 transition-all duration-300 ${
+          mobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}>
+          <div className="px-6 py-4 space-y-4">
+            <Link 
+              href="/" 
+              className="block text-gray-700 hover:text-[#da3b28] transition-colors font-medium py-2 border-b border-gray-100"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Accueil
+            </Link>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a 
+              href="/#musique" 
+              className="block text-gray-700 hover:text-[#da3b28] transition-colors font-medium py-2 border-b border-gray-100"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Musique
+            </a>
+            <span className="block text-[#da3b28] font-medium py-2 border-b border-gray-100">
+              Bio
+            </span>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a 
+              href="/#concerts" 
+              className="block text-gray-700 hover:text-[#da3b28] transition-colors font-medium py-2 border-b border-gray-100"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Concerts
+            </a>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a 
+              href="/#contact" 
+              className="block text-gray-700 hover:text-[#da3b28] transition-colors font-medium py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </a>
           </div>
         </div>
       </nav>
