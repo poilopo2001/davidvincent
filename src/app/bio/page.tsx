@@ -154,7 +154,7 @@ export default function Bio() {
             }`}
           >
             <blockquote className="text-2xl text-gray-700 leading-relaxed italic text-center mb-8 border-l-4 border-[#da3b28] pl-8">
-              &ldquo;David Vincent les a vus. Il les a vus car ses membres étaient nés, à cet autre siècle où les Pixies ont sorti Doolittle ; chacun d&apos;entre eux se souvient précisément de ce à quoi il était occupé lorsqu&apos;on annonça la mort de Kurt Cobain à la radio.&rdquo;
+              &ldquo;Rock hybride, teinté de noise, de cold wave et d&apos;indus, où l&apos;organique confronte le synthétique, dans lequel le viscéral s&apos;arme d&apos;électro, la fuzz toise la boîte à rythme.&rdquo;
             </blockquote>
           </div>
 
@@ -172,10 +172,13 @@ export default function Bio() {
             </h2>
             <div className="prose prose-xl max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
+                David Vincent les a vus. Il les a vus car ses membres étaient nés, à cet autre siècle où les Pixies ont sorti Doolittle ; chacun d&apos;entre eux se souvient précisément de ce à quoi il était occupé lorsqu&apos;on annonça la mort de Kurt Cobain à la radio.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
                 Comment peut-on encore craindre la fin d&apos;un siècle, le XXème siècle, qui est déjà advenue ? Névrose des XY auxquels l&apos;injonction d&apos;avoir à changer la vie n&apos;en finit pas de les torturer.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                C&apos;est de ce mal que se nourrit l&apos;œuvre de David Vincent qui, à l&apos;instar du protagoniste de la série éponyme, livre une bataille contre un ennemi aux multiples visages dans une guerre perdue d&apos;avance.
+                C&apos;est de ce mal que se nourrit l&apos;œuvre de David Vincent qui, à l&apos;instar du protagoniste de la série les envahisseurs, livre une bataille contre un ennemi aux multiples visages dans une guerre perdue d&apos;avance.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Narcissisme, frustration, désir. Soumission, dépression, déliquescence. La musique de David Vincent est paradoxale. Elle recèle en elle toutes les contradictions de cette génération impossible, celle qui a commencé au vinyle et se noie dans les algorithmes.

@@ -283,8 +283,8 @@ LES COMPOSITIONS
                   <p className="text-sm text-gray-500">Concert</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-3xl font-black text-[#da3b28] mb-1" style={{fontFamily: 'var(--font-bebas)'}}>NOV 2025</p>
-                  <p className="text-gray-600">Dates à venir</p>
+                  <p className="text-3xl font-black text-[#da3b28] mb-1" style={{fontFamily: 'var(--font-bebas)'}}>15 NOV</p>
+                  <p className="text-gray-600">2025</p>
                   <button className="mt-2 px-4 py-2 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed font-medium">
                     BIENTÔT
                   </button>

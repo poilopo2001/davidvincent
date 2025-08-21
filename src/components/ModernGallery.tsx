@@ -33,6 +33,30 @@ const images = [
     alt: 'David Vincent - Rock Attitude',
     title: 'Rock Attitude',
     subtitle: 'Shooting'
+  },
+  {
+    src: '/image/32f75d74-c62b-46bd-b1de-30327c2f216f.jpg',
+    alt: 'David Vincent - Session Studio',
+    title: 'Session Studio',
+    subtitle: '2025'
+  },
+  {
+    src: '/image/584e1e77-7361-4ce6-81b3-a5a64292bd00.jpg',
+    alt: 'David Vincent - Répétitions',
+    title: 'Répétitions',
+    subtitle: 'Arles'
+  },
+  {
+    src: '/image/5bf54b47-8b6a-4d21-9c33-3423bdcf675e.jpg',
+    alt: 'David Vincent - Ambiance',
+    title: 'Ambiance Rock',
+    subtitle: 'Backstage'
+  },
+  {
+    src: '/image/caab6129-1f21-4c6e-b18a-36c3827a4175.jpg',
+    alt: 'David Vincent - Création',
+    title: 'Processus Créatif',
+    subtitle: 'Studio 2025'
   }
 ];
 
