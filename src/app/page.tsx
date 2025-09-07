@@ -122,7 +122,7 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-100 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-            Arles - Rock, noise, cold wave
+            Arles - Rock, indus, cold wave
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

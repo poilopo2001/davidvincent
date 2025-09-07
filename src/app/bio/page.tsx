@@ -154,7 +154,7 @@ export default function Bio() {
             }`}
           >
             <blockquote className="text-2xl text-gray-700 leading-relaxed italic text-center mb-8 border-l-4 border-[#da3b28] pl-8">
-              &ldquo;Rock hybride, teinté de noise, de cold wave et d&apos;indus, où l&apos;organique confronte le synthétique, dans lequel le viscéral s&apos;arme d&apos;électro, la fuzz toise la boîte à rythme.&rdquo;
+              &ldquo;Rock hybride, teinté d&apos;indus, de cold wave et d&apos;indus, où l&apos;organique confronte le synthétique, dans lequel le viscéral s&apos;arme d&apos;électro, la fuzz toise la boîte à rythme.&rdquo;
             </blockquote>
           </div>
 
@@ -200,7 +200,7 @@ export default function Bio() {
             </h2>
             <div className="prose prose-xl max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
-                Rock hybride, teinté de noise, de cold wave et d&apos;indus, où l&apos;organique confronte le synthétique, dans lequel le viscéral s&apos;arme d&apos;électro, la fuzz toise la boîte à rythme, pour sonner comme un acte de résistance et de foi inextinguible en avenir déjà échu.
+                Rock hybride, teinté d&apos;indus, de cold wave et d&apos;indus, où l&apos;organique confronte le synthétique, dans lequel le viscéral s&apos;arme d&apos;électro, la fuzz toise la boîte à rythme, pour sonner comme un acte de résistance et de foi inextinguible en avenir déjà échu.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Délibérément brute, et tout à la fois complexe, l&apos;écriture musicale, fulgurante mais maîtrisée, révèle l&apos;étendue et la richesse des amours musicales qui portent les deux partenaires de David Vincent.
@@ -239,7 +239,7 @@ export default function Bio() {
               <div>
                 <h3 className="text-2xl font-black mb-4 text-[#da3b28]" style={{fontFamily: 'var(--font-oswald)'}}>THE SWEET CHILD</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Aux relents noise, s&apos;appuyant sur la progressivité de la structure musicale, met l&apos;auditeur sous la pression de la distorsion et des percussions jusqu&apos;à ce que la tension dramatique atteigne son paroxysme. Le morceau se mue alors en une complainte qui, grâce au velours de la voix, vous caresse jusqu&apos;à ce que batterie et guitare vous piquent à nouveau dans l&apos;échine par surprise. C&apos;est assurément un morceau maîtrisé et les arrangements lui confèrent épaisseur et texture.
+                  Aux relents indus, s&apos;appuyant sur la progressivité de la structure musicale, met l&apos;auditeur sous la pression de la distorsion et des percussions jusqu&apos;à ce que la tension dramatique atteigne son paroxysme. Le morceau se mue alors en une complainte qui, grâce au velours de la voix, vous caresse jusqu&apos;à ce que batterie et guitare vous piquent à nouveau dans l&apos;échine par surprise. C&apos;est assurément un morceau maîtrisé et les arrangements lui confèrent épaisseur et texture.
                 </p>
               </div>
 

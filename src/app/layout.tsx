@@ -26,7 +26,7 @@ const kalam = Kalam({
 });
 
 export const metadata: Metadata = {
-  title: "Rock, noise, cold wave, David Vincent | Arles",
+  title: "Rock, indus, cold wave, David Vincent | Arles",
   description: "David Vincent est un groupe originaire d'Arles. Le duo qualifie sa musique de rock, au sens très large du terme, il peut aller d'un titre 100% électronique à un titre complètement instrumental, chanter en anglais comme en français.",
 };
 
